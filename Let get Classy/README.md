@@ -6,4 +6,4 @@ A Class base component is just a normal javascript class. To create one we have 
 class UserClass extends React.Component{
 
 }
-We have Render method inside it which gives us piece of JSX.
+We have render method inside it which gives us piece of JSX. So we can say that class base component is a class which is render method which gives JSX. React.Component is basically a class which is given to us by react so we have to import React from 'react'. 

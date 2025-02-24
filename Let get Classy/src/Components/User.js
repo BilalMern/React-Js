@@ -1,4 +1,4 @@
-const User = ()=>{
+const User = (props)=>{
     return(
         <div className="user-card">
 <h2>name: Bilal</h2>
