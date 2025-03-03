@@ -31,3 +31,4 @@ this.state={
     count:0
 }
 }
+to update it react gives us this.setState() which takes an object which contain the updated value of state variable.
