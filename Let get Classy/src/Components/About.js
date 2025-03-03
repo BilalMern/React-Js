@@ -5,8 +5,8 @@ const About=()=>{
         <>
         <div className="About_User_div">
         <h3>Welcome to About Us page</h3><br/>
-        <User props={"bilal"}/>
-        <UserClass/>
+        <User name={"bilalfunction"}/>
+        <UserClass name = {"billaclass"}/>
         </div>
         </>
     )

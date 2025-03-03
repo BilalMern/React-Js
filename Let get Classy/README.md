@@ -19,3 +19,6 @@ class UserClass extends React.Component{
     )
     }
 }
+When we say we are rendering a functional component what does it mean so basically on our web page if there is a functional component, it loads so that means we are mounting that functional component, we are kind of like calling that function, we are invoking that functonal component. So whenever we say invoking a functional Component that means we are loading or mounting that function on to the webpage.    
+ 
+When we are creating instance of a class means loading a class base component means creating an instance of class. So when we say we are loading class base component on our webpage it means we are creating instance of that class.
