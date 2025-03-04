@@ -1,44 +1,52 @@
-// import React from "react"
-// class UserClass extends React.Component{
-//     //To pass props in class base component we have to create a constructor:
+// import React from "react";
+// class UserClass extends React.Component {
 //     constructor(props){
 //         super(props)
-
+//         this.state={
+//           count:0
+//         }
 //     }
-//     render(){
-//         return(
-//             <div className="user-card">
-//             <h2>name: {this.props.name}</h2>
-//             <h3>location: Karchi</h3>
-//             <h4>contact: @bilal.mern</h4>
-//                     </div>
-//         )
-//     }
+//   render() {
+//     return (
+//       <div className="user-card">
+//         <h2>Count:{this.state.count}</h2>
+//         <button onClick={()=>{
+//           this.setState({
+//             count: this.state.count+1
+//           })
+//         }}>Add</button>
+//         <h2>name: {this.props.name}</h2>
+//         <h3>location: Karchi</h3>
+//         <h4>contact: @bilal.mern</h4>
+//       </div>
+//     );
+//   }
 // }
 // export default UserClass
 
+
 import React from "react";
-class UserClass extends React.Component {
-    constructor(props){
-        super(props)
-        this.state={
-          count:0
-        }
+class UserClass extends React.Component{
+  constructor(props){
+    super(props)
+    this.state={
+      count:0,
     }
-  render() {
-    return (
+  }
+  render(){
+    return(
       <div className="user-card">
-        <h2>Count:{this.state.count}</h2>
+        <h2>Count: {this.state.count}</h2>
         <button onClick={()=>{
           this.setState({
             count: this.state.count+1
           })
-        }}>Add</button>
-        <h2>name: {this.props.name}</h2>
-        <h3>location: Karchi</h3>
-        <h4>contact: @bilal.mern</h4>
-      </div>
-    );
+        }}>ADD</button>
+      <h2>name: {this.props.name}</h2>
+      <h3>location: Karchi</h3>
+      <h4>contact: @bilal.mern</h4>
+              </div>
+    )
   }
 }
-export default UserClass
+export default UserClass;
