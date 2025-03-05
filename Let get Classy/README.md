@@ -56,10 +56,14 @@ console.log("parent render")
 export default About;
 
 let call here About as parent and UserClass as a child and assume these both have constructor, render and componentDidMount methods so whats the hirarchy is when the instance of new class is created:
-first the constructor of parent class base component will be called then render when its rendering it it sees that oh there is another child class so it goes to that child class base component to run its lifecycle before finishing the parent component or before the parent component is mounted, so it will render child component lifecycle and afte completely mounted it, it will back to parent and then render last componentDidMount method of it. i,e.
+first the constructor of parent class base component will be called then render when its rendering it it sees that oh there is another child class so it goes to that child class base component to run its lifecycle before finishing the parent component or before the parent component is mounted, so it will render child component lifecycle and after completely mounted it, it will back to parent and then render last componentDidMount method of it. i,e.
 parent constructor
 About.js parent render
 UserClass.js child constructor
 UserClass.js child render
 UserClass.js child componentDidMount
 About.js parent componentDidMount
+
+so in last we can say that componentDidMount method will be called once the component has been completely mounted.
+
+COMPONENTDIDMOUNT:
