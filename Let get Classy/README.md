@@ -67,3 +67,38 @@ About.js parent componentDidMount
 so in last we can say that componentDidMount method will be called once the component has been completely mounted.
 
 COMPONENTDIDMOUNT:
+Why componentDidMount is used? why react is giving this to us, So there are some things that we do once the component is mounted successfully, like to make an API calls. The benefit of making an API calls inside it is first of all we load our component once the compoment is loaded with basic details the we make an API call and fill the details, why so that React component loads very fast. means we have to render our component as fast as possible then make an API call and get the data.
+
+WHY REACT IS FAST?
+React is fast because React has two phases, Render Phase and Commit Phase.
+To understand them we need to know basic steps of class base component lifecycle.
+
+Mounting 
+   |
+Constructor
+   |
+render
+   |
+React updates DOM
+   |
+componentDidMount
+
+
+
+here above Mounting, constructor and render methods comes in Render Phase, and React updates DOM and componentDidMount comes in Commit phase. Here React do an optimization for us for example if we have two childrens in our parent component then React works as above steps means first of all React completes only Render phase for parent as well as both childrens then after batch them it go to complete Commit Phase in which firstChild componentDidMount will run then second childs and in last the parents componentDidMount will run this is optimization, means React first batch or complete Render phase then it go to Commit phase. i.e:
+
+-parent constructor
+-parent render
+
+   -firstChild constructor
+   -firstChild render
+
+   -secondChild constructor
+   -secondChild render
+
+    -firstChild componentDidMount
+    -secondChild componentDidMount
+
+-parent componentDidMount
+
+So react optimizes performance like this. by doing reander phase for both childrens and then commit phase for both the childrens.
