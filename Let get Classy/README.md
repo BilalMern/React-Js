@@ -102,3 +102,5 @@ here above Mounting, constructor and render methods comes in Render Phase, and R
 -parent componentDidMount
 
 So react optimizes performance like this. by doing reander phase for both childrens and then commit phase for both the childrens.
+
+API calls in Class based components:
