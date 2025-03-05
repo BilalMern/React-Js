@@ -32,3 +32,7 @@ this.state={
 }
 }
 to update it react gives us this.setState() which takes an object which contain the updated value of state variable.
+
+
+Class base component Lifecycle:
+Whenever class component is render on to the web page or mounted on to the webpage means the instance of class is created so when it is called then first the consttructor will be called so the first thing when the class loads is constructor is called, once the constructor is called then render is called
