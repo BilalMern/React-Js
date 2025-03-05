@@ -35,4 +35,31 @@ to update it react gives us this.setState() which takes an object which contain 
 
 
 Class base component Lifecycle:
-Whenever class component is render on to the web page or mounted on to the webpage means the instance of class is created so when it is called then first the consttructor will be called so the first thing when the class loads is constructor is called, once the constructor is called then render is called
+Whenever class component is render on to the web page or mounted on to the webpage means the instance of class is created so when it is called then first the consttructor will be called so the first thing when the class loads is constructor is called, once the constructor is called then render is called.
+
+Just like we have render and constructor method is class base component we have on more important method which is known as componentDidMount(){} so the hirarchy of them is first the constructor method will be called then render method then componentDidMount will be called in the last, means once this class based component is mounted on to the web page or new instance of class is created then this componentDidMount will be called.
+
+if we have children class base component in parent class base component i.e
+render(){
+console.log("parent render")
+    return(
+<>
+        <div className="About_User_div">
+        <h3>Welcome to About Us page</h3><br/>
+        <UserClass name={"bilalClass"}/>
+        </div>
+        </>
+    )
+    
+}
+}
+export default About;
+
+let call here About as parent and UserClass as a child and assume these both have constructor, render and componentDidMount methods so whats the hirarchy is when the instance of new class is created:
+first the constructor of parent class base component will be called then render when its rendering it it sees that oh there is another child class so it goes to that child class base component to run its lifecycle before finishing the parent component or before the parent component is mounted, so it will render child component lifecycle and afte completely mounted it, it will back to parent and then render last componentDidMount method of it. i,e.
+parent constructor
+About.js parent render
+UserClass.js child constructor
+UserClass.js child render
+UserClass.js child componentDidMount
+About.js parent componentDidMount
