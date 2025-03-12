@@ -104,3 +104,24 @@ here above Mounting, constructor and render methods comes in Render Phase, and R
 So react optimizes performance like this. by doing reander phase for both childrens and then commit phase for both the childrens.
 
 API calls in Class based components:
+ constructor(props) {
+    super(props);
+
+    this.state = {
+      count: 0,
+      userInfo: {
+        name: "malik",
+        id: "123",
+      },
+    };
+  }
+ 
+ async componentDidMount() {
+    const data = await fetch(" https://api.github.com/users/BilalMern");
+    const json = await data.json();
+    console.log(json)
+    
+    this.setState({
+      userInfo: json,
+    })
+  }

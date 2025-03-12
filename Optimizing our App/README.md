@@ -1,0 +1,1 @@
+We will see how can we write code in a better way and we will also see how we can optimze our app, how we can make our app performant, how we can make our app very fast, how we can make our app lightweight so that it loads on the web page very fast.
