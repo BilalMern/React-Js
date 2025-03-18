@@ -2,10 +2,16 @@ import RestaurantCard from "./RestaurantCard";
 import resCardData from "../utils/mockData";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus.js";
 const Body = () => {
   const [listOfRestaurant, setListOfRestaurant] = useState(resCardData);
   const [copyListOfRestaurant, setCopyListOfRestaurant] = useState(resCardData);
   const [searchText, setSearchText] = useState("");
+  console.log("Body component is rendering..."); // Debugging
+  const onlineStatus = useOnlineStatus();
+  console.log("Online Status:", onlineStatus); // Debugging log
+
+  if (onlineStatus === false) return <h1>Failed to load web!</h1>;
   return (
     <>
       <div className="main">
@@ -37,7 +43,7 @@ const Body = () => {
                 res.cuisine.toLowerCase().includes(searchText.toLowerCase())
               );
               setCopyListOfRestaurant(searchRes);
-              setSearchText("")
+              setSearchText("");
             }}
           >
             <i className="bi bi-search"></i>
@@ -58,12 +64,3 @@ const Body = () => {
   );
 };
 export default Body;
-
-
-
-
-
-
-
-
-
