@@ -11,3 +11,19 @@ WHY WE NEED CUSTOM HOOKS:
 We may need a custom hook in a situation where our component have more then one major responsibilities for example first major responsibilty is fetching the data and second major responsibility is displaying the data on to the web page. So if think that our component should only be concerned about displayin the data, it should worry where the data is coming from, how the data is coming from.
 
 The best place to create these helper functions is in "utils" and always prefer to create a separate file for a separate hook thats a good convention to follow. and we have to named a file exactly same as the name of hook and whenever we are creating a hook, always start with the word "use" in small case and then remaining name in camel case like useRestaurantMenu. so if the fuction name starting with the small letter 'use' React will know that its a hook.
+
+
+HOW TO MAKE A LARGE SCALE WEBSITE PERFORMANT AND FAST:
+When we build website with several components then what happen is parcel, a bundler bundled the whole web js files into single js file and if the website is too large then the size of that bundled js file will high which makes web app slow and sluggish. So the js file size increases by how many components it loads. To make it fast and performant we have to break our app into smaller peices, means we will make smaller bundles of these files this process is known as:
+-Chunking
+-Code Splitting
+-Dynamic Bundling
+
+For example, if we are building a trip booking application where users can plan their trips with various options such as flights, hotels, trains, buses, and cabs, we can create separate bundles for each of these. This allows us to logically split our web application into smaller bundles, preventing a single bundle from becoming too large. By doing this, we ensure that the request for each JavaScript file remains lightweight, reducing load times and improving performance.
+
+
+
+
+
+
+

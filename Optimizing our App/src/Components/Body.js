@@ -11,7 +11,8 @@ const Body = () => {
   const onlineStatus = useOnlineStatus();
   console.log("Online Status:", onlineStatus); // Debugging log
 
-  if (onlineStatus === false) return <h1>Failed to load web!</h1>;
+  if (onlineStatus === false) return <h1>Failed to load web!</h1>; //Online offline logic
+
   return (
     <>
       <div className="main">

@@ -53,20 +53,21 @@ import { useEffect, useState } from "react"
 
 const useOnlineStatus = () => {
   const [onlineStatus, setOnlineStatus] = useState(navigator.onLine);
+  
+  const handleStatusChange = () => {
+    console.log("Status changed:", navigator.onLine); // Debugging
+    setOnlineStatus(navigator.onLine); //Best Practice: Use navigator.onLine, This ensures that the correct online/offline status is set immediately: If the user is offline at the start, useState correctly initializes to false. The UI immediately reflects the correct state before useEffect even runs.
+    
+  };
 
   useEffect(() => {
     console.log("useEffect is running"); // Debugging
-    const handleStatusChange = () => {
-      console.log("Status changed:", navigator.onLine); // Debugging
-      setOnlineStatus(navigator.onLine); //Best Practice: Use navigator.onLine, This ensures that the correct online/offline status is set immediately: If the user is offline at the start, useState correctly initializes to false. The UI immediately reflects the correct state before useEffect even runs.
-      
-    };
-
+    
     window.addEventListener("online", handleStatusChange);
     window.addEventListener("offline", handleStatusChange);
 
-    return () => {
-      window.removeEventListener("online", handleStatusChange);
+    return () => {  //The function inside return in useEffect is called a cleanup function. It runs when the component unmounts or before useEffect re-runs.
+      window.removeEventListener("online", handleStatusChange);//Without () → We pass the function reference, and it runs later when the event occurs. If we wrote window.addEventListener("online", handleStatusChange());, it would immediately invoke handleStatusChange when the useEffect runs, instead of waiting for the online event. By passing handleStatusChange without parentheses, we are telling the event listener: Run this function later when the 'online' event occurs
       window.removeEventListener("offline", handleStatusChange);
     };
   }, []);
@@ -75,3 +76,5 @@ const useOnlineStatus = () => {
 };
 
 export default useOnlineStatus;
+
+
