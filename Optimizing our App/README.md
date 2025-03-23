@@ -18,6 +18,7 @@ When we build website with several components then what happen is parcel, a bund
 -Chunking
 -Code Splitting
 -Dynamic Bundling
+-Layzy Loading
 
 For example, if we are building a trip booking application where users can plan their trips with various options such as flights, hotels, trains, buses, and cabs, we can create separate bundles for each of these. This allows us to logically split our web application into smaller bundles, preventing a single bundle from becoming too large. By doing this, we ensure that the request for each JavaScript file remains lightweight, reducing load times and improving performance.
 
