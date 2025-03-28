@@ -19,8 +19,25 @@ When we build website with several components then what happen is parcel, a bund
 -Code Splitting
 -Dynamic Bundling
 -Layzy Loading
+-Dynamic Import
+-Own Demand Loading // Whenever the user is going on to any particular page, only then load that page.
 
 For example, if we are building a trip booking application where users can plan their trips with various options such as flights, hotels, trains, buses, and cabs, we can create separate bundles for each of these. This allows us to logically split our web application into smaller bundles, preventing a single bundle from becoming too large. By doing this, we ensure that the request for each JavaScript file remains lightweight, reducing load times and improving performance.
+
+//How you make a large scale app lighter and performant? I can use Lazy Loading to distribute my code into different chunks.
+
+//We can say that applying Lazy loading is just like making small applications inside a big application. So this is how we can logically split our website into smaller bundles so that we dont put a load on a single bundle, so that our request for that js file does not become so heavy that it take a lot of time to get into the browser.
+
+
+APPLYING LAZY LOADING:
+Here in our app let us assume our app is not just delivering food, it also start selling groceries. So here we are going to make different bundle for grocery and different bundle for our main food. We made Grocery.js Component. To apply Lazy Loading to any component we dont have to import it as usual, we have to import it by Lazy Loading. i.e:
+
+const Grocery = lazy() //here Lazy is a function which is given to us by react, so we have to import it, ie:
+import {lazy} from React;// and Lazy function takes a callback function in which we can write import.// this import is not same as usual import, This import is basically a function which will take the part of that Grocery. i.e:
+
+const Grocery = lazy(()=> import(./Components/Grocery))
+
+// Sometimes we got an error of react suspension because our Grocery component has to took some time to render on to the web page, and React is very fast, React cant wait for data coming from Grocery component and what happens is React try to load Grocery component but the code isnt there so it throws an error. To tackle this error we use Suspense component, and we have to wrap our component inside it and we have to give it a placeholder, so what happens is we have to give that Suspense a fallback(what should React render when the code isnt available) we need this placeholder fallback becuase when we are on the home page our code of Grocery is not there, so React tries to load something but it cannot load until the Grocery code is there, so meanwhile React wants something to be present on that screen and we can give that inside fallback inside suspense. and we can pass JSX in fallback.
 
 
 
