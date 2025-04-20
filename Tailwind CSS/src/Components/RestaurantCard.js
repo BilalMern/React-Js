@@ -1,11 +1,13 @@
 const RestaurantCard = ({resData}) => {
   return (
     <>
+      {/* <div className="RestaurantCard_div"> */}
       <div className="RestaurantCard_div">
+
         <img
           src={resData.img}
           alt=""
-          className="RestaurantCard-img"
+          className="h-50 w-50"
         />
         <div className="RestaurantCard-detials">
           <h3>

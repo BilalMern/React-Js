@@ -22,8 +22,10 @@ const CustomHookExample = () => {
   // Render user data once it's fetched successfully
   return (
     <>
+    <div className="flex items-center flex-col pr-8 mb-8">
       <h2>Name: {hookInfo.name}</h2>
       <h3>Id: {hookInfo.id}</h3>
+      </div>
     </>
   );
 };
