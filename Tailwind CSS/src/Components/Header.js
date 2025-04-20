@@ -5,8 +5,10 @@ const Header = () => {
   const onlineStatus = useOnlineStatus();
   return (
     <>
-      <div className="Header_Main">
-        <img src={LOGO_URL} alt="" className="Header-logo" />
+      <div className="flex">
+        <div>
+        <img src={LOGO_URL} alt="" className="w-8" />
+        </div>
         <div className="Header-links">
           <ul>
             <li>Online Status: {(onlineStatus ===true)? "✅" : "🔴"}</li>
