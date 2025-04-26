@@ -4,21 +4,23 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus.js";
 import CustomHookExample from "./CustomHookExample.js";
+import { withPromotedLabel } from "./RestaurantCard";
 
 const Body = () => {
   const [listOfRestaurant, setListOfRestaurant] = useState(resCardData);
   const [copyListOfRestaurant, setCopyListOfRestaurant] = useState(resCardData);
   const [searchText, setSearchText] = useState("");
-  console.log("Body component is rendering..."); // Debugging
+  console.log("Body component is rendering...", listOfRestaurant); // Debugging
   const onlineStatus = useOnlineStatus();
   console.log("Online Status:", onlineStatus); // Debugging log
 
   if (onlineStatus === false) return <h1>Failed to load web!</h1>; //Online offline logic
-
+  //Promoted label on RestaurantCard functonality using Higher order Component:
+  const RestaurantCardPromoted = withPromotedLabel(RestaurantCard); // Now this component has a promoted label in it,
+  // RestaurantCard (original) --> passed to --> withPromotedLabel (function) --> gives back --> RestaurantCardPromoted (new component)
   return (
     <>
       <div className="flex justify-center items-center">
-
         <div className="bg-gray-200 rounded-sm font-bold p-1.5">
           <button
             onClick={() => {
@@ -55,15 +57,22 @@ const Body = () => {
         </div>
       </div>
 
-        <CustomHookExample/>
-        
-       {/* <div className="Restaurant_container">   */}
-      
-       <div className="grid grid-cols-[repeat(5,200px)] justify-center gap-12">  
-       {copyListOfRestaurant.map((restaurant) => {
+      <CustomHookExample />
+
+      {/* <div className="Restaurant_container">   */}
+
+      <div className="grid grid-cols-[repeat(5,200px)] justify-center gap-12">
+        {copyListOfRestaurant.map((restaurant) => {
           return (
             <Link to={`/restaurant/${restaurant.id}`}>
-              <RestaurantCard resData={restaurant} key={restaurant.id} />
+              {restaurant.promoted ? (
+                <RestaurantCardPromoted
+                  resData={restaurant}
+                  key={restaurant.id}
+                />
+              ) : (
+                <RestaurantCard resData={restaurant} key={restaurant.id} />
+              )}
             </Link>
           );
         })}

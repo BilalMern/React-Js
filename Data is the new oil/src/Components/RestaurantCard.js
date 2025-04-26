@@ -39,4 +39,45 @@ const RestaurantCard = ({resData}) => {
     </>
   );
 };
+
+// We will make here a higher order component which will take the RestaurantCard as input ane it will return us a new component a new enhanced component having promoted label on the resCards.
+// Contract of HOC:
+// input - RestaurantCard ==>RestaurantCardPromoted
+
+export const withPromotedLabel =(RestaurantCard)=>{
+return(props)=>{
+  return(
+    <div>
+      <label>Promoted</label>
+          {/* Forward all props to original card */}
+      <RestaurantCard {...props}/>
+      {/* {...props} means: Take all the props you got (resData, key, etc.) and pass them one by one to RestaurantCard */}
+    </div>
+  )
+}
+}
+
 export default RestaurantCard;
+// Body sends props to RestaurantCardPromoted
+
+// RestaurantCardPromoted adds extra UI (Promoted label)
+
+// Then passes all props using {...props} to the original RestaurantCard
+
+// RestaurantCard uses them normally.
+
+
+// Imagine you (Body) send a pizza order 🍕 to a waiter (RestaurantCardPromoted):
+
+// The waiter doesn't make pizza.
+
+// He attaches a "VIP customer" sticker (Promoted Label) on the order.
+
+// Then he forwards the full order (props) to the kitchen (RestaurantCard).
+
+// Result:
+
+// The kitchen (RestaurantCard) gets the correct order.
+
+// The pizza has a VIP label (Promoted).
+
