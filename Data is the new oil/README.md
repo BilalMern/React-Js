@@ -3,3 +3,5 @@ Our first task is to add a promoted label to those restaurant cards who has prom
 
 HIGHER ORDER COMPONENTS:
 used to enhanced the component, they are just a normal fuction which takes a component and return other component which is enhanced. It's a pattern used for code reuse and logic abstraction.
+
+MANAGIND DATA PROPERLY IN OUR APP:

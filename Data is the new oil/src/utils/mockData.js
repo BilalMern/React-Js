@@ -7,7 +7,8 @@ let resCardData = [
       delivery: "30 MINS",
       price: "PKR 1000 FOR TWO",
       id: "123",
-      promoted: true
+      promoted: true,
+      description: "Lorem ipsum dolor sit amet. Ipsum ipsum ipsum lorem ipsum lorem. Lorem lorem lorem ipsum lorem ipsum ipsum lorem lorem lorem. Ipsum lorem ipsum ipsum ipsum lorem ipsum ipsum lorem ipsum ipsum ipsum."
     },
     {
       img: (src =
@@ -17,7 +18,9 @@ let resCardData = [
       delivery: "90 MINS",
       price: "PKR 1500 PER MATKA",
       id: "456",
-      promoted: false
+      promoted: false,
+      description: "Lorem ipsum dolor sit amet. Ipsum ipsum ipsum lorem ipsum lorem. Lorem lorem lorem ipsum lorem ipsum ipsum lorem lorem lorem. Ipsum lorem ipsum ipsum ipsum lorem ipsum ipsum lorem ipsum ipsum ipsum."
+
     },
     {
       img: (src =
@@ -27,7 +30,9 @@ let resCardData = [
       delivery: "60 MINS",
       price: "PKR 3000 FOR TWO",
       id: "789",
-      promoted: false
+      promoted: false,
+      description: "Lorem ipsum dolor sit amet. Ipsum ipsum ipsum lorem ipsum lorem. Lorem lorem lorem ipsum lorem ipsum ipsum lorem lorem lorem. Ipsum lorem ipsum ipsum ipsum lorem ipsum ipsum lorem ipsum ipsum ipsum."
+
 
     },
     {
@@ -38,7 +43,9 @@ let resCardData = [
       delivery: "45 MINS",
       price: "PKR 1000 PER PLATE",
       id: "101112",
-      promoted: false
+      promoted: false,
+      description: "Lorem ipsum dolor sit amet. Ipsum ipsum ipsum lorem ipsum lorem. Lorem lorem lorem ipsum lorem ipsum ipsum lorem lorem lorem. Ipsum lorem ipsum ipsum ipsum lorem ipsum ipsum lorem ipsum ipsum ipsum."
+
     },
     {
       img: (src =
@@ -48,7 +55,10 @@ let resCardData = [
       delivery: "60 MINS",
       price: "PKR 3500 PER KG",
       id: "131415",
-      promoted: false
+      promoted: false,
+      description: "Lorem ipsum dolor sit amet. Ipsum ipsum ipsum lorem ipsum lorem. Lorem lorem lorem ipsum lorem ipsum ipsum lorem lorem lorem. Ipsum lorem ipsum ipsum ipsum lorem ipsum ipsum lorem ipsum ipsum ipsum."
+      
+
     },
     {
       img: (src =
@@ -58,7 +68,9 @@ let resCardData = [
       delivery: "45 MINS",
       price: "PKR 2500 PER PLATE",
       id: "161718",
-      promoted: false
+      promoted: false,
+      description: "Lorem ipsum dolor sit amet. Ipsum ipsum ipsum lorem ipsum lorem. Lorem lorem lorem ipsum lorem ipsum ipsum lorem lorem lorem. Ipsum lorem ipsum ipsum ipsum lorem ipsum ipsum lorem ipsum ipsum ipsum."
+
     },
     {
       img: (src =
@@ -68,7 +80,9 @@ let resCardData = [
       delivery: "45 MINS",
       price: "PKR 2000 PER PLATE",
       id: "192030",
-      promoted: false
+      promoted: false,
+      description: "Lorem ipsum dolor sit amet. Ipsum ipsum ipsum lorem ipsum lorem. Lorem lorem lorem ipsum lorem ipsum ipsum lorem lorem lorem. Ipsum lorem ipsum ipsum ipsum lorem ipsum ipsum lorem ipsum ipsum ipsum."
+
     },
     {
       img: (src =
@@ -78,7 +92,9 @@ let resCardData = [
       delivery: "60 MINS",
       price: "PKR 4000 PER PLATE",
       id: "31,32,33",
-      promoted: true
+      promoted: true,
+      description: "Lorem ipsum dolor sit amet. Ipsum ipsum ipsum lorem ipsum lorem. Lorem lorem lorem ipsum lorem ipsum ipsum lorem lorem lorem. Ipsum lorem ipsum ipsum ipsum lorem ipsum ipsum lorem ipsum ipsum ipsum."
+
     },
     {
       img: (src =
@@ -88,7 +104,9 @@ let resCardData = [
       delivery: "60 MINS",
       price: "PKR 4000 PER PLATE",
       id: "34,35,36",
-      promoted: false
+      promoted: false,
+      description: "Lorem ipsum dolor sit amet. Ipsum ipsum ipsum lorem ipsum lorem. Lorem lorem lorem ipsum lorem ipsum ipsum lorem lorem lorem. Ipsum lorem ipsum ipsum ipsum lorem ipsum ipsum lorem ipsum ipsum ipsum."
+
     },
     {
       img: (src =
@@ -98,7 +116,9 @@ let resCardData = [
       delivery: "75 MINS",
       price: "PKR 10000 PER PLATE",
       id: "373839",
-      promoted: false
+      promoted: false,
+      description: "Lorem ipsum dolor sit amet. Ipsum ipsum ipsum lorem ipsum lorem. Lorem lorem lorem ipsum lorem ipsum ipsum lorem lorem lorem. Ipsum lorem ipsum ipsum ipsum lorem ipsum ipsum lorem ipsum ipsum ipsum."
+
     },
     {
       img: (src =
@@ -108,7 +128,9 @@ let resCardData = [
       delivery: "70 MINS",
       price: "PKR 3000 PER PLATE",
       id: "404142",
-      promoted: true
+      promoted: true,
+      description: "Lorem ipsum dolor sit amet. Ipsum ipsum ipsum lorem ipsum lorem. Lorem lorem lorem ipsum lorem ipsum ipsum lorem lorem lorem. Ipsum lorem ipsum ipsum ipsum lorem ipsum ipsum lorem ipsum ipsum ipsum."
+
     },
     {
       img: (src =
@@ -118,7 +140,9 @@ let resCardData = [
       delivery: "60 MINS",
       price: "PKR 2500 PER PLATE",
       id: "434445",
-      promoted: false
+      promoted: false,
+      description: "Lorem ipsum dolor sit amet. Ipsum ipsum ipsum lorem ipsum lorem. Lorem lorem lorem ipsum lorem ipsum ipsum lorem lorem lorem. Ipsum lorem ipsum ipsum ipsum lorem ipsum ipsum lorem ipsum ipsum ipsum."
+
     },
     {
       img: (src =
@@ -128,7 +152,9 @@ let resCardData = [
       delivery: "60 MINS",
       price: "PKR 2500 PER PLATE",
       id: "464748",
-      promoted: false
+      promoted: false,
+      description: "Lorem ipsum dolor sit amet. Ipsum ipsum ipsum lorem ipsum lorem. Lorem lorem lorem ipsum lorem ipsum ipsum lorem lorem lorem. Ipsum lorem ipsum ipsum ipsum lorem ipsum ipsum lorem ipsum ipsum ipsum."
+
     },
     {
       img: (src =
@@ -138,7 +164,9 @@ let resCardData = [
       delivery: "60 MINS",
       price: "PKR 3500 PER PLATE",
       id: "495051",
-      promoted: false
+      promoted: false,
+      description: "Lorem ipsum dolor sit amet. Ipsum ipsum ipsum lorem ipsum lorem. Lorem lorem lorem ipsum lorem ipsum ipsum lorem lorem lorem. Ipsum lorem ipsum ipsum ipsum lorem ipsum ipsum lorem ipsum ipsum ipsum."
+
 
     },
     {
@@ -149,7 +177,9 @@ let resCardData = [
       delivery: "40 MINS",
       price: "PKR 1500 PER PLATE",
       id: "525354",
-      promoted: false
+      promoted: false,
+      description: "Lorem ipsum dolor sit amet. Ipsum ipsum ipsum lorem ipsum lorem. Lorem lorem lorem ipsum lorem ipsum ipsum lorem lorem lorem. Ipsum lorem ipsum ipsum ipsum lorem ipsum ipsum lorem ipsum ipsum ipsum."
+
 
     },
     {
@@ -160,7 +190,9 @@ let resCardData = [
       delivery: "30 MINS",
       price: "PKR 1500",
       id: "555657",
-      promoted: false
+      promoted: false,
+      description: "Lorem ipsum dolor sit amet. Ipsum ipsum ipsum lorem ipsum lorem. Lorem lorem lorem ipsum lorem ipsum ipsum lorem lorem lorem. Ipsum lorem ipsum ipsum ipsum lorem ipsum ipsum lorem ipsum ipsum ipsum."
+
 
     },
     {
@@ -171,7 +203,9 @@ let resCardData = [
       delivery: "10 MINS",
       price: "PKR 1000",
       id: "585960",
-      promoted: true
+      promoted: true,
+      description: "Lorem ipsum dolor sit amet. Ipsum ipsum ipsum lorem ipsum lorem. Lorem lorem lorem ipsum lorem ipsum ipsum lorem lorem lorem. Ipsum lorem ipsum ipsum ipsum lorem ipsum ipsum lorem ipsum ipsum ipsum."
+
 
     },
     {
@@ -182,7 +216,9 @@ let resCardData = [
       delivery: "30 MINS",
       price: "PKR 2000",
       id: "616263",
-      promoted: false
+      promoted: false,
+      description: "Lorem ipsum dolor sit amet. Ipsum ipsum ipsum lorem ipsum lorem. Lorem lorem lorem ipsum lorem ipsum ipsum lorem lorem lorem. Ipsum lorem ipsum ipsum ipsum lorem ipsum ipsum lorem ipsum ipsum ipsum."
+
 
     },
     {
@@ -193,7 +229,9 @@ let resCardData = [
       delivery: "30 MINS",
       price: "PKR 1000",
       id: "646566",
-      promoted: false
+      promoted: false,
+      description: "Lorem ipsum dolor sit amet. Ipsum ipsum ipsum lorem ipsum lorem. Lorem lorem lorem ipsum lorem ipsum ipsum lorem lorem lorem. Ipsum lorem ipsum ipsum ipsum lorem ipsum ipsum lorem ipsum ipsum ipsum."
+
 
     },
     {
@@ -204,7 +242,9 @@ let resCardData = [
       delivery: "30 MINS",
       price: "PKR 3000",
       id: "676869",
-      promoted: false
+      promoted: false,
+      description: "Lorem ipsum dolor sit amet. Ipsum ipsum ipsum lorem ipsum lorem. Lorem lorem lorem ipsum lorem ipsum ipsum lorem lorem lorem. Ipsum lorem ipsum ipsum ipsum lorem ipsum ipsum lorem ipsum ipsum ipsum."
+
 
     },
   ];
