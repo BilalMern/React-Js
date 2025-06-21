@@ -53,7 +53,21 @@ const appRouter= createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<RouterProvider router={appRouter} />)
+ 
 
 
+//!Lifting State Up Concept:
+
+// import React from "react";
+// import ReactDOM from "react-dom/client";
+// import { LiftStateUp } from "./Components/LiftStateUp";
+// const AppLayout =()=>{
+//     return(
+//         <LiftStateUp/>
+//     )
+// }
+
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(<AppLayout />)
 
 
