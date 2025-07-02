@@ -1,3 +1,5 @@
+
+
 const RestaurantCard = ({resData}) => {
   return (
     <>
@@ -30,6 +32,7 @@ const RestaurantCard = ({resData}) => {
             </div>
             <div className="RestaurantCard-price">
                 <h6>{resData.price}</h6>
+           
             </div>
           </div>
           <div></div>
