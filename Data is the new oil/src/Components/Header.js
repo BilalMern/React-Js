@@ -5,15 +5,14 @@ import { useContext } from "react";
 import UserContext from "../utils/UserContext";
 const Header = () => {
   const onlineStatus = useOnlineStatus();
-  const {loggedInUser}=useContext(UserContext)
-
+ const {loggedInUser}=useContext(UserContext)
   return (
     <>
       <div className="flex justify-between items-center">
         <div>
         <img src={LOGO_URL} alt="" className="w-30" />
         </div>
-        <div className="Header-links">
+        <div className="Header-links overflow-x-auto">
           <ul className="flex gap-10 pr-8 font-bold text-lg" >
             <li>Online Status: {(onlineStatus ===true)? "✅" : "🔴"}</li>
             <li> <Link to="/">Home </Link> </li>
@@ -21,7 +20,7 @@ const Header = () => {
             <li><Link to="/about">About Us</Link></li>
             <li><Link to="/contact">Contact Us</Link></li>
             <li><Link to="/grocery">Grocery</Link></li>
-        <li>{loggedInUser}</li>
+          <li>{loggedInUser}</li>
           </ul>
         </div>
       </div>
@@ -30,3 +29,8 @@ const Header = () => {
   );
 };
 export default Header;
+
+
+
+
+

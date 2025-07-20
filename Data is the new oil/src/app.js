@@ -10,13 +10,18 @@ import { RouterProvider } from "react-router-dom";
 import RestaurantMenuBody from "./Components/RestaurantMenuBody";
 import { lazy, Suspense } from "react";
 import './index.css'
-
+import UserContext from "./utils/UserContext";
+import { useState } from "react";
 const Grocery = lazy(()=> import("./Components/Grocery"))// Sometimes we got an error of react suspension because our Grocery component has to took some time to render on to the web page, and React is very fast, React cant wait for data coming from Grocery component and what happens is React try to load Grocery component but the code isnt there so it throws an error. To tackle this error we use Suspense component, and we have to wrap our component inside it and we have to give it a placeholder, so what happens is we have to give that Suspense a fallback(what should React render when the code isnt available) we need this placeholder fallback becuase when we are on the home page our code of Grocery is not there, so React tries to load something but it cannot load until the Grocery code is there, so meanwhile React wants something to be present on that screen and we can give that inside fallback inside suspense. and we can pass JSX in fallback.
 const AppLayout = ()=>{
+     const [loggedInUser, setLoggedInUser] = useState("");
     return(
         <>
+
+        <UserContext.Provider value = {{loggedInUser, setLoggedInUser}}>
         <Header/>
         <Outlet/>
+        </UserContext.Provider>
         </>
     )
 }
@@ -56,11 +61,31 @@ root.render(<RouterProvider router={appRouter} />)
  
 
 
+
+
 //!Lifting State Up Concept:
 
 // import React from "react";
 // import ReactDOM from "react-dom/client";
 // import { LiftStateUp } from "./Components/LiftStateUp";
+// const AppLayout =()=>{
+//     return(
+//         <LiftStateUp/>
+//     )
+// }
+
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(<AppLayout />)
+
+
+
+
+
+
+
+// import React from "react";
+// import ReactDOM from "react-dom/client";
+// import LiftStateUp from "./Components/LiftStateUp";
 // const AppLayout =()=>{
 //     return(
 //         <LiftStateUp/>
